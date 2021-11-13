@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>images/Note.png</file>
+        <file>images/minimize.svg</file>
+        <file>images/close.svg</file>
+        <file>images/tack.svg</file>
+    </qresource>
+</RCC>
