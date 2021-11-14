@@ -94,95 +94,18 @@ border-radius: 5px;
        <property name="spacing">
         <number>0</number>
        </property>
-       <item row="1" column="4">
-        <widget class="QToolButton" name="toolButton">
+       <item row="1" column="7">
+        <widget class="QToolButton" name="toolButton_5">
          <property name="text">
           <string>...</string>
          </property>
-        </widget>
-       </item>
-       <item row="1" column="11">
-        <spacer name="horizontalSpacer_4">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>40</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item row="4" column="1" colspan="8">
-        <spacer name="verticalSpacer">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>40</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item row="1" column="6">
-        <spacer name="horizontalSpacer_5">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>40</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item row="2" column="11" rowspan="2">
-        <spacer name="horizontalSpacer">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>40</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item row="2" column="4" colspan="6">
-        <widget class="QLabel" name="label">
-         <property name="styleSheet">
-          <string notr="true">border:none;</string>
-         </property>
-         <property name="text">
-          <string>My Works</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
+         <property name="icon">
+          <iconset resource="resources.qrc">
+           <normaloff>:/images/images/align-right.svg</normaloff>:/images/images/align-right.svg</iconset>
          </property>
         </widget>
        </item>
-       <item row="3" column="4" colspan="6">
-        <widget class="QTextEdit" name="textEdit"/>
-       </item>
-       <item row="1" column="2">
-        <spacer name="horizontalSpacer_6">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>40</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item row="1" column="10">
+       <item row="1" column="19">
         <spacer name="horizontalSpacer_7">
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
@@ -195,8 +118,56 @@ border-radius: 5px;
          </property>
         </spacer>
        </item>
-       <item row="0" column="4" colspan="5">
-        <spacer name="verticalSpacer_2">
+       <item row="2" column="5">
+        <widget class="QToolButton" name="tb_bold">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="resources.qrc">
+           <normaloff>:/images/images/bold.svg</normaloff>:/images/images/bold.svg</iconset>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="20">
+        <spacer name="horizontalSpacer_4">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="2" column="6">
+        <widget class="QToolButton" name="tb_strickt">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="resources.qrc">
+           <normaloff>:/images/images/strikethrough2.svg</normaloff>:/images/images/strikethrough2.svg</iconset>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0" rowspan="2">
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="5" column="1" colspan="16">
+        <spacer name="verticalSpacer">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
          </property>
@@ -208,7 +179,36 @@ border-radius: 5px;
          </property>
         </spacer>
        </item>
-       <item row="1" column="9">
+       <item row="4" column="4" colspan="14">
+        <widget class="QTextEdit" name="textEdit"/>
+       </item>
+       <item row="3" column="20" rowspan="2">
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="1" column="0" colspan="2">
+        <spacer name="horizontalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="1" column="16">
         <widget class="QToolButton" name="pb_close">
          <property name="toolTip">
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Close&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -225,27 +225,18 @@ border-radius: 5px;
          </property>
         </widget>
        </item>
-       <item row="1" column="3">
-        <widget class="QToolButton" name="toolButton_2">
+       <item row="1" column="6">
+        <widget class="QToolButton" name="toolButton_4">
          <property name="text">
           <string>...</string>
          </property>
+         <property name="icon">
+          <iconset resource="resources.qrc">
+           <normaloff>:/images/images/align-center.svg</normaloff>:/images/images/align-center.svg</iconset>
+         </property>
         </widget>
        </item>
-       <item row="2" column="0" rowspan="2">
-        <spacer name="horizontalSpacer_2">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>40</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item row="1" column="8">
+       <item row="1" column="15">
         <widget class="QToolButton" name="pb_minimize">
          <property name="toolTip">
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Minimize&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -262,8 +253,8 @@ border-radius: 5px;
          </property>
         </widget>
        </item>
-       <item row="1" column="0" colspan="2">
-        <spacer name="horizontalSpacer_3">
+       <item row="1" column="2">
+        <spacer name="horizontalSpacer_6">
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -275,7 +266,74 @@ border-radius: 5px;
          </property>
         </spacer>
        </item>
-       <item row="1" column="7">
+       <item row="1" column="11">
+        <spacer name="horizontalSpacer_5">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="0" column="4" colspan="13">
+        <spacer name="verticalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="2" column="7">
+        <widget class="QToolButton" name="tb_underline">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="resources.qrc">
+           <normaloff>:/images/images/underline.svg</normaloff>:/images/images/underline.svg</iconset>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="5">
+        <widget class="QToolButton" name="toolButton_3">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="resources.qrc">
+           <normaloff>:/images/images/align-left.svg</normaloff>:/images/images/align-left.svg</iconset>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="11" colspan="3">
+        <widget class="QLabel" name="label">
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border:none;</string>
+         </property>
+         <property name="text">
+          <string>My Works</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="14">
         <widget class="QToolButton" name="tb_Setting">
          <property name="toolTip">
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Settings&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -289,10 +347,31 @@ border-radius: 5px;
          </property>
         </widget>
        </item>
-       <item row="1" column="5">
-        <widget class="QToolButton" name="toolButton_3">
+       <item row="2" column="16">
+        <widget class="QToolButton" name="toolButton_2">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;OpenNote&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>...</string>
+         </property>
+         <property name="icon">
+          <iconset resource="resources.qrc">
+           <normaloff>:/images/images/folder-open.svg</normaloff>:/images/images/folder-open.svg</iconset>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="15">
+        <widget class="QToolButton" name="toolButton">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Save&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="resources.qrc">
+           <normaloff>:/images/images/Save.svg</normaloff>:/images/images/Save.svg</iconset>
          </property>
         </widget>
        </item>

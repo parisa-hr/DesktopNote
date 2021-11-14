@@ -12,5 +12,8 @@
         <file>images/bold.svg</file>
         <file>images/strikethrough2.svg</file>
         <file>images/underline.svg</file>
+        <file>images/Save.svg</file>
+        <file>images/Load.svg</file>
+        <file>images/folder-open.svg</file>
     </qresource>
 </RCC>
