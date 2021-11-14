@@ -5,5 +5,12 @@
         <file>images/close.svg</file>
         <file>images/tack.svg</file>
         <file>images/setting.svg</file>
+        <file>images/strikethrough.svg</file>
+        <file>images/align-center.svg</file>
+        <file>images/align-right.svg</file>
+        <file>images/align-left.svg</file>
+        <file>images/bold.svg</file>
+        <file>images/strikethrough2.svg</file>
+        <file>images/underline.svg</file>
     </qresource>
 </RCC>
