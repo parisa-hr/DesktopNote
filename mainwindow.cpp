@@ -13,6 +13,9 @@ MainWindow::MainWindow(QWidget *parent):
     setAttribute(Qt::WA_TranslucentBackground, true);
     setAttribute(Qt::WA_AlwaysStackOnTop, true);
     setAutoFillBackground(true);
+
+    _settingPage = new Settings(this);
+    _settingPage->hide();
 }
 
 MainWindow::~MainWindow()
@@ -46,4 +49,9 @@ void  MainWindow::on_pb_close_clicked()
 void  MainWindow::on_pb_minimize_clicked()
 {
     showMinimized();
+}
+
+void  MainWindow::on_tb_Setting_clicked()
+{
+    _settingPage->show();
 }

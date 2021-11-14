@@ -4,5 +4,6 @@
         <file>images/minimize.svg</file>
         <file>images/close.svg</file>
         <file>images/tack.svg</file>
+        <file>images/setting.svg</file>
     </qresource>
 </RCC>

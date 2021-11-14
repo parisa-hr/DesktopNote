@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "settings.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui
@@ -31,9 +32,12 @@ private slots:
 
     void  on_pb_minimize_clicked();
 
+    void  on_tb_Setting_clicked();
+
 private:
     Ui::MainWindow *ui;
     QPoint          dragPosition;
+    Settings       *_settingPage;
 };
 
 #endif // MAINWINDOW_H
