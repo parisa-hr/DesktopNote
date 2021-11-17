@@ -60,6 +60,7 @@ private:
     QPoint          dragPosition;
     Settings       *_settingPage;
     QFont           _font;
+    QString         currentFile;
 };
 
 #endif // MAINWINDOW_H

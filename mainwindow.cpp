@@ -7,6 +7,8 @@
 #include <QTextDocumentFragment>
 #include <QDebug>
 #include <QSettings>
+#include <QFileDialog>
+#include <QMessageBox>
 
 MainWindow::MainWindow(QWidget *parent):
     QMainWindow(parent),
@@ -81,12 +83,9 @@ void  MainWindow::on_tb_StrikeOut_clicked(bool checked)
 {
     _font = ui->textEdit->font();
 
-    if (checked)
-    {
-        _font.setStrikeOut(true);
+    _font.setStrikeOut(checked);
 
-        ui->textEdit->setCurrentFont(_font);
-    }
+    ui->textEdit->setCurrentFont(_font);
 }
 
 void  MainWindow::on_tb_align_left_clicked(bool checked)
@@ -124,10 +123,54 @@ void  MainWindow::on_tb_align_right_clicked(bool checked)
 
 void  MainWindow::on_tb_save_clicked()
 {
+    QString  fileName;
+
+    // If we don't have a filename from before, get one.
+    if (currentFile.isEmpty())
+    {
+        fileName    = QFileDialog::getSaveFileName(this, "Save");
+        currentFile = fileName;
+    }
+    else
+    {
+        fileName = currentFile;
+    }
+
+    QFile  file(fileName);
+
+    if (!file.open(QIODevice::WriteOnly | QFile::Text))
+    {
+        QMessageBox::warning(this, "Warning", "Cannot save file: " + file.errorString());
+
+        return;
+    }
+
+    setWindowTitle(fileName);
+    QTextStream  out(&file);
+    QString      text = ui->textEdit->toPlainText();
+    out << text;
+    file.close();
 }
 
 void  MainWindow::on_tb_load_clicked()
 {
+    QString  fileName = QFileDialog::getOpenFileName(this, "Open the file");
+    QFile    file(fileName);
+
+    currentFile = fileName;
+
+    if (!file.open(QIODevice::ReadOnly | QFile::Text))
+    {
+        QMessageBox::warning(this, "Warning", "Cannot open file: " + file.errorString());
+
+        return;
+    }
+
+    setWindowTitle(fileName);
+    QTextStream  in(&file);
+    QString      text = in.readAll();
+    ui->textEdit->setText(text);
+    file.close();
 }
 
 void  MainWindow::setSettings(const QString &str, const QVariant &value)
