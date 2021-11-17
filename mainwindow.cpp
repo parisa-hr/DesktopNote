@@ -1,8 +1,11 @@
-#include "mainwindow.h"
+﻿#include "mainwindow.h"
 #include "ui_mainwindow.h"
 
 #include <QMouseEvent>
 #include <QPixmap>
+#include <QTextCursor>
+#include <QTextDocumentFragment>
+#include <QDebug>
 
 MainWindow::MainWindow(QWidget *parent):
     QMainWindow(parent),
@@ -54,4 +57,60 @@ void  MainWindow::on_pb_minimize_clicked()
 void  MainWindow::on_tb_Setting_clicked()
 {
     _settingPage->show();
+}
+
+void  MainWindow::on_tb_bold_clicked(bool checked)
+{
+    checked ? ui->textEdit->setFontWeight(QFont::Bold)
+    : ui->textEdit->setFontWeight(QFont::Normal);
+}
+
+void  MainWindow::on_tb_underline_clicked(bool underline)
+{
+    ui->textEdit->setFontUnderline(underline);
+}
+
+void  MainWindow::on_tb_StrikeOut_clicked(bool checked)
+{
+    _font = ui->textEdit->font();
+
+    if (checked)
+    {
+        _font.setStrikeOut(true);
+
+        ui->textEdit->setCurrentFont(_font);
+    }
+}
+
+void  MainWindow::on_tb_align_left_clicked(bool checked)
+{
+    ui->tb_align_right->setChecked(false);
+    ui->tb_align_center->setChecked(false);
+
+    if (checked)
+    {
+        ui->textEdit->setAlignment(Qt::AlignLeft);
+    }
+}
+
+void  MainWindow::on_tb_align_center_clicked(bool checked)
+{
+    ui->tb_align_left->setChecked(false);
+    ui->tb_align_right->setChecked(false);
+
+    if (checked)
+    {
+        ui->textEdit->setAlignment(Qt::AlignCenter);
+    }
+}
+
+void  MainWindow::on_tb_align_right_clicked(bool checked)
+{
+    ui->tb_align_center->setChecked(false);
+    ui->tb_align_left->setChecked(false);
+
+    if (checked)
+    {
+        ui->textEdit->setAlignment(Qt::AlignRight);
+    }
 }

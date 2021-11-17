@@ -34,10 +34,23 @@ private slots:
 
     void  on_tb_Setting_clicked();
 
+    void  on_tb_bold_clicked(bool checked);
+
+    void  on_tb_underline_clicked(bool underline);
+
+    void  on_tb_StrikeOut_clicked(bool checked);
+
+    void  on_tb_align_left_clicked(bool checked);
+
+    void  on_tb_align_center_clicked(bool checked);
+
+    void  on_tb_align_right_clicked(bool checked);
+
 private:
     Ui::MainWindow *ui;
     QPoint          dragPosition;
     Settings       *_settingPage;
+    QFont           _font;
 };
 
 #endif // MAINWINDOW_H
