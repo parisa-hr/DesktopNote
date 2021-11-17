@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=MyNote
+Comment=A small note paper for writing daily tasks on the desktop
+Exec=DesktopNote
+Icon=tack
+Categories=Office;
+X-AppImage-Version=
