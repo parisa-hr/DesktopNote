@@ -6,6 +6,7 @@
 #include <QTextCursor>
 #include <QTextDocumentFragment>
 #include <QDebug>
+#include <QSettings>
 
 MainWindow::MainWindow(QWidget *parent):
     QMainWindow(parent),
@@ -19,6 +20,10 @@ MainWindow::MainWindow(QWidget *parent):
 
     _settingPage = new Settings(this);
     _settingPage->hide();
+
+
+    auto  _windowPos = getSettings("windowPose").toPoint();
+    move(_windowPos);
 }
 
 MainWindow::~MainWindow()
@@ -47,6 +52,8 @@ void  MainWindow::mouseMoveEvent(QMouseEvent *event)
 void  MainWindow::on_pb_close_clicked()
 {
     close();
+
+    setSettings("windowPose", pos());
 }
 
 void  MainWindow::on_pb_minimize_clicked()
@@ -113,4 +120,29 @@ void  MainWindow::on_tb_align_right_clicked(bool checked)
     {
         ui->textEdit->setAlignment(Qt::AlignRight);
     }
+}
+
+void  MainWindow::on_tb_save_clicked()
+{
+}
+
+void  MainWindow::on_tb_load_clicked()
+{
+}
+
+void  MainWindow::setSettings(const QString &str, const QVariant &value)
+{
+    QSettings  _setting("Parisa_hr", "MyNotes");
+
+    _setting.setValue(str, value);
+}
+
+QVariant  MainWindow::getSettings(const QString &str)
+{
+    QSettings  _setting("Parisa_hr", "MyNotes");
+    QVariant   v;
+
+    v = _setting.value(str);
+
+    return v;
 }

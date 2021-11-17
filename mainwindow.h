@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QVariant>
 #include "settings.h"
 
 QT_BEGIN_NAMESPACE
@@ -23,28 +24,36 @@ public:
     // QWidget interface
 
 protected:
-    void  mousePressEvent(QMouseEvent *event);
+    void      mousePressEvent(QMouseEvent *event);
 
-    void  mouseMoveEvent(QMouseEvent *event);
+    void      mouseMoveEvent(QMouseEvent *event);
 
 private slots:
-    void  on_pb_close_clicked();
+    void      on_pb_close_clicked();
 
-    void  on_pb_minimize_clicked();
+    void      on_pb_minimize_clicked();
 
-    void  on_tb_Setting_clicked();
+    void      on_tb_Setting_clicked();
 
-    void  on_tb_bold_clicked(bool checked);
+    void      on_tb_bold_clicked(bool checked);
 
-    void  on_tb_underline_clicked(bool underline);
+    void      on_tb_underline_clicked(bool underline);
 
-    void  on_tb_StrikeOut_clicked(bool checked);
+    void      on_tb_StrikeOut_clicked(bool checked);
 
-    void  on_tb_align_left_clicked(bool checked);
+    void      on_tb_align_left_clicked(bool checked);
 
-    void  on_tb_align_center_clicked(bool checked);
+    void      on_tb_align_center_clicked(bool checked);
 
-    void  on_tb_align_right_clicked(bool checked);
+    void      on_tb_align_right_clicked(bool checked);
+
+    void      on_tb_save_clicked();
+
+    void      on_tb_load_clicked();
+
+    void      setSettings(const QString &str, const QVariant &value);
+
+    QVariant  getSettings(const QString &str);
 
 private:
     Ui::MainWindow *ui;

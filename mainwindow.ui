@@ -375,7 +375,7 @@ border-radius: 5px;
         </widget>
        </item>
        <item row="2" column="16">
-        <widget class="QToolButton" name="toolButton_2">
+        <widget class="QToolButton" name="tb_load">
          <property name="toolTip">
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;OpenNote&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
@@ -389,7 +389,7 @@ border-radius: 5px;
         </widget>
        </item>
        <item row="2" column="15">
-        <widget class="QToolButton" name="toolButton">
+        <widget class="QToolButton" name="tb_save">
          <property name="toolTip">
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Save&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
