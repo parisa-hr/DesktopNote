@@ -23,9 +23,35 @@ MainWindow::MainWindow(QWidget *parent):
     _settingPage = new Settings(this);
     _settingPage->hide();
 
+    connect(_settingPage, &Settings::changingTextColor, this, [this](QColor color)
+    {
+        ui->textEdit->setTextColor(color);
+    });
+    connect(_settingPage, &Settings::changingTextFont, this, [this](QFont font)
+    {
+        ui->textEdit->setFontFamily(font.family());
+        qDebug() << "fontFamily = " << ui->textEdit->fontFamily();
+    });
+    connect(_settingPage, &Settings::changingFontSize, this, [this](int w)
+    {
+        ui->textEdit->setFontPointSize(w);
+    });
+
 
     auto  _windowPos = getSettings("windowPose").toPoint();
     move(_windowPos);
+
+    auto  _fontColor = getSettings("fontColor").toString();
+    ui->textEdit->setTextColor(_fontColor);
+
+    auto  _fontFamily = getSettings("fontFamily").toString();
+    ui->textEdit->setFontFamily(_fontFamily);
+
+    auto  _fontSize = getSettings("fontSize").toInt();
+    ui->textEdit->setFontPointSize(_fontSize);
+
+
+    _settingPage->initialSetting(_fontColor, _fontFamily, _fontSize);
 }
 
 MainWindow::~MainWindow()
@@ -56,6 +82,9 @@ void  MainWindow::on_pb_close_clicked()
     close();
 
     setSettings("windowPose", pos());
+    setSettings("fontColor", ui->textEdit->textColor());
+    setSettings("fontFamily", ui->textEdit->currentFont().family());
+    setSettings("fontSize", ui->textEdit->fontPointSize());
 }
 
 void  MainWindow::on_pb_minimize_clicked()
@@ -81,7 +110,7 @@ void  MainWindow::on_tb_underline_clicked(bool underline)
 
 void  MainWindow::on_tb_StrikeOut_clicked(bool checked)
 {
-    _font = ui->textEdit->font();
+    _font = ui->textEdit->currentFont();
 
     _font.setStrikeOut(checked);
 
