@@ -8,4 +8,4 @@ download and use it from [this](https://github.com/parisa-hr/DesktopNote/release
 
 # Demo of app
 
-![Demo picture](doc/demo1.png)
+![Demo picture](doc/demo.png)
