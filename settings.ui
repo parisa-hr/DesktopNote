@@ -102,6 +102,9 @@
         <property name="minimum">
          <number>2</number>
         </property>
+        <property name="value">
+         <number>12</number>
+        </property>
        </widget>
       </item>
       <item row="1" column="0">

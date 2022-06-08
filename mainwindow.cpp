@@ -108,13 +108,24 @@ void  MainWindow::on_tb_underline_clicked(bool underline)
     ui->textEdit->setFontUnderline(underline);
 }
 
-void  MainWindow::on_tb_StrikeOut_clicked(bool checked)
+void  MainWindow::on_tb_StrikeOut_clicked()
 {
+    QTextCursor  cursor = ui->textEdit->textCursor();
+
     _font = ui->textEdit->currentFont();
 
-    _font.setStrikeOut(checked);
+    if (!cursor.selection().isEmpty())
+    {
+        _font.setStrikeOut(true);
 
-    ui->textEdit->setCurrentFont(_font);
+        ui->textEdit->setCurrentFont(_font);
+    }
+    else
+    {
+        _font.setStrikeOut(false);
+
+        ui->textEdit->setCurrentFont(_font);
+    }
 }
 
 void  MainWindow::on_tb_align_left_clicked(bool checked)
@@ -217,4 +228,25 @@ QVariant  MainWindow::getSettings(const QString &str)
     v = _setting.value(str);
 
     return v;
+}
+
+void  MainWindow::on_textEdit_cursorPositionChanged()
+{
+    QTextCursor  cursor = ui->textEdit->textCursor();
+
+    if (!cursor.selection().isEmpty())
+    {
+        return;
+    }
+
+    _font.setStrikeOut(false);
+    ui->textEdit->setCurrentFont(_font);
+}
+
+void  MainWindow::on_textEdit_selectionChanged()
+{
+    QTextCursor  cursor = ui->textEdit->textCursor();
+    auto         text   = cursor.selectedText();
+
+    qDebug() << "i am hererrr" << text;
 }

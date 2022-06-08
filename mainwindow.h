@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QTextCharFormat>
 #include <QVariant>
 #include "settings.h"
 
@@ -39,7 +40,7 @@ private slots:
 
     void      on_tb_underline_clicked(bool underline);
 
-    void      on_tb_StrikeOut_clicked(bool checked);
+    void      on_tb_StrikeOut_clicked();
 
     void      on_tb_align_left_clicked(bool checked);
 
@@ -54,6 +55,10 @@ private slots:
     void      setSettings(const QString &str, const QVariant &value);
 
     QVariant  getSettings(const QString &str);
+
+    void      on_textEdit_cursorPositionChanged();
+
+    void      on_textEdit_selectionChanged();
 
 private:
     Ui::MainWindow *ui;
